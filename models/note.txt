@@ -1,0 +1,15 @@
+findBy: function (param) {
+  this.findAll({
+    where: {
+      last_name: {
+        $like: param
+      }
+    }
+  }).then(function (result) {
+    console.log("\n\nFind All Last Name Like Lubis\n\n")
+    result.forEach((val) => {
+      console.log(val.dataValues)
+    })
+
+  })
+}
