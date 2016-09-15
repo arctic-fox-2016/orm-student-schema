@@ -17,10 +17,10 @@ let models = require('./models/index')
     console.log(`===========================`);
 })
 
-models.students.findById(3).then(function(user){
-  console.log(`===========================`);
-  console.log(`Email siswa : ${user.email}`);
-  console.log(`===========================`);
+  models.students.findById(3).then(function(user){
+    console.log(`===========================`);
+    console.log(`Email siswa : ${user.email}`);
+    console.log(`===========================`);
 })
 
 

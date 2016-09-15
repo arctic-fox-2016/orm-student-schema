@@ -4,7 +4,10 @@ module.exports = function(sequelize, DataTypes) {
     first_name: DataTypes.STRING,
     last_name: DataTypes.STRING,
     gender: DataTypes.STRING,
-    age: DataTypes.STRING,
+    age: {
+      type: DataTypes.STRING,
+      validate: {min:5}
+    },
     email: {
       type: DataTypes.TEXT,
       validate: {isEmail:true},
