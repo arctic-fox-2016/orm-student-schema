@@ -5,15 +5,22 @@ let models = require('./models/index')
 
 
   models.students.findById(3).then(function(user){
-  console.log(`Nama lengkap siswa :`);
-  console.log(`${user.first_name} ${user.last_name}`);
-})
-
-
-  models.students.findById(3).then(function(user){
+    console.log(`===========================`);
     console.log(`Nama lengkap siswa :`);
     console.log(`${user.first_name} ${user.last_name}`);
+    console.log(`===========================`);
+})
+
+  models.students.findById(3).then(function(user){
+    console.log(`===========================`);
     console.log(`Umur siswa : ${user.age}`);
+    console.log(`===========================`);
+})
+
+models.students.findById(3).then(function(user){
+  console.log(`===========================`);
+  console.log(`Email siswa : ${user.email}`);
+  console.log(`===========================`);
 })
 
 
