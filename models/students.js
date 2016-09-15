@@ -1,8 +1,14 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
   var students = sequelize.define('students', {
-    first_name: DataTypes.STRING,
-    last_name: DataTypes.STRING,
+    first_name: {
+      type: DataTypes.STRING,
+      validate: {is: /^[a-z]+$/i}
+    },
+    last_name: {
+      type: DataTypes.STRING,
+      validate: {is: /^[a-z]+$/i}
+    },
     gender: DataTypes.STRING,
     age: {
       type: DataTypes.INTEGER,
@@ -10,8 +16,9 @@ module.exports = function(sequelize, DataTypes) {
     },
     email: {
       type: DataTypes.TEXT,
-      validate: {isEmail:true},
-      notIn:[['email']]
+      validate:
+      {isEmail:true,
+        notIn:[['email']]}
     }
   }, {
     classMethods: {
