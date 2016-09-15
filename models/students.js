@@ -7,7 +7,8 @@ module.exports = function(sequelize, DataTypes) {
     age: DataTypes.STRING,
     email: {
       type: DataTypes.TEXT,
-      validate: {isEmail:true}
+      validate: {isEmail:true},
+      notIn:[['email']]
     }
   }, {
     classMethods: {
