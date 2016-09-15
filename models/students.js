@@ -5,7 +5,7 @@ module.exports = function(sequelize, DataTypes) {
     last_name: DataTypes.STRING,
     gender: DataTypes.STRING,
     age: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       validate: {min:5}
     },
     email: {
