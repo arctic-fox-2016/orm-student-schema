@@ -12,7 +12,7 @@ module.exports = function(sequelize, DataTypes) {
     gender: DataTypes.STRING,
     age: {
       type: DataTypes.INTEGER,
-      validate: {min:5}
+      validate: {min:5, len:2},
     },
     email: {
       type: DataTypes.TEXT,
