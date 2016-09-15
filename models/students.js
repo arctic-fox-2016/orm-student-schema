@@ -5,12 +5,15 @@ module.exports = function(sequelize, DataTypes) {
     last_name: DataTypes.STRING,
     gender: DataTypes.STRING,
     age: DataTypes.STRING,
-    email: DataTypes.TEXT
+    email: {
+      type: DataTypes.TEXT,
+      validate: {isEmail:true}
+    }
   }, {
     classMethods: {
       associate: function(models) {
         // associations can be defined here
-      
+
       }
     }
   });
