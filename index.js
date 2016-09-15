@@ -10,9 +10,19 @@ model.Students.findById(1).then(function(user) {
   console.log(user.first_name + ' ' +user.last_name);
 })
 
-model.Students.findById(2).then(function(user) {
+model.Students.findById(1).then(function(user) {
   console.log("Contoh Memunculkan Umur ");
   console.log(user.age);
+})
+
+model.Students.findById(1).then(function(user) {
+  console.log("Contoh Memunculkan email ");
+  console.log(user.email);
+})
+
+model.Students.findById(1).then(function(user) {
+  console.log("Contoh Memunculkan telepon ");
+  console.log(user.phone);
 })
 
 
